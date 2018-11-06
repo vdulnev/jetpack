@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_graph"
+            app:startDestination="@id/startFragment">
+
+    <fragment android:id="@+id/itemsListFragment" android:name="com.example.slavad.jetpack.ItemsListFragment"
+              android:label="fragment_items_list" tools:layout="@layout/fragment_items_list"/>
+    <fragment android:id="@+id/startFragment" android:name="com.example.slavad.jetpack.StartFragment"
+              android:label="fragment_start" tools:layout="@layout/fragment_start">
+        <action android:id="@+id/action_startFragment_to_itemsListFragment" app:destination="@id/itemsListFragment"/>
+    </fragment>
+</navigation>
